@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_mconvertor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.enhanzcom.currency_convertor.MConvertor"
+    tools:showIn="@layout/app_bar_mconvertor"
+    android:background="@color/backgound_grey">
+
+
+    <Spinner
+        android:layout_width="100sp"
+        android:minHeight="48dp"
+        android:id="@+id/currency_spinner1"
+        android:layout_height="wrap_content"
+        style="@style/spinner_style"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="100sp"
+        android:minHeight="48dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/currency_spinner2"
+        style="@style/spinner_style"
+        android:textAlignment="center"
+        android:layout_alignTop="@+id/cc_text1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:id="@+id/cc_text1"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="textEnd"
+        android:layout_below="@+id/currency_spinner1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:id="@+id/graph"
+        android:layout_marginTop="59dp"
+        android:layout_below="@+id/currency_spinner2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/currency_amount"
+        android:layout_width="120sp"
+        android:textAlignment="textEnd"
+        android:textSize="30sp"
+        android:text="0.00"
+        android:layout_alignBottom="@+id/currency_spinner1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="50sp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/aud"
+        android:id="@+id/imageView2"
+        android:layout_alignBottom="@+id/currency_spinner1"
+        android:layout_toRightOf="@+id/currency_spinner1"
+        android:layout_toEndOf="@+id/currency_spinner1"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp" />
+
+    <ImageView
+        android:layout_width="50sp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/aud"
+        android:layout_alignBottom="@+id/currency_spinner2"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2"
+        android:id="@+id/imageView3" />
+
+</RelativeLayout>
